@@ -1,12 +1,23 @@
-let colorlist = ['gold', 'yellow', 'turquoise', 'red']
-
+var x;
+var v;
 function setup() {
-  createCanvas(windowWidth, windowHeight);
-    background(255);
+  createCanvas(500, 400);
+  v = 5;
+  x = 30;
 }
+
+
 
 function draw() {
-  noStroke()
-  fill(random(colorlist));
-  ellipse(mouseX, mouseY, 25, 25);
-}
+  background(225);
+  fill('red')
+  circle(x, 130, 20);
+  
+  x = x + v;
+  
+  if (x < 0 || x > 500){ 
+    v = v * -1;
+    }
+ 
+ 
+ }
